@@ -1,0 +1,32 @@
+{
+  "name": "riddlecreator",
+  "version": "1.0.0",
+  "description": "pump.fun-style bonding curve launcher for XRPL (mainnet)",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["xrpl", "bonding-curve", "xaman", "riddle"],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icomplypropertyservices/riddlecreator.git"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.0",
+    "helmet": "^8.3.0",
+    "xrpl": "^5.0.0",
+    "xumm-sdk": "^1.11.2"
+  }
+}

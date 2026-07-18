@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+.vercel
+.DS_Store
+Thumbs.db
+npm-debug.log*
+riddlecreator.db*
