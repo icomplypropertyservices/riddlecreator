@@ -18,6 +18,14 @@ node server.js
 ```
 Platform wallet needs enough XRP to fund launches (~7 XRP each, recovered from the 20 XRP launch fee). For Xaman signing, add XUMM_API_KEY/SECRET from apps.xumm.dev.
 
+## GitHub & Vercel
+- Repo: https://github.com/icomplypropertyservices/riddlecreator
+- Production: https://riddlecreator.vercel.app
+- Linked Vercel project auto-deploys from `main`
+- Required env on Vercel: `MASTER_KEY`, `PLATFORM_SEED`, and `NODE_OPTIONS=--experimental-require-module` (xrpl CJS interop)
+- Optional: `XUMM_API_KEY`, `XUMM_API_SECRET`, fee/fund amounts, `XRPL_WSS`
+- SQLite on Vercel uses `/tmp` (ephemeral per instance). Fine for demos; for multi-instance production use a durable host or external DB and keep `MASTER_KEY` + DB backups together.
+
 ## Flows
 **Launch**: POST /api/launch/invoice → creator pays fee to platform address with destination tag → POST /api/launch/:id/confirm with tx hash → wallets funded, supply minted, token live.
 
